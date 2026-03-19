@@ -21,7 +21,7 @@ export default function AllAccounts() {
 
         // ✅ SAME API AS TRENDING
         const res = await axios.get(
-          "https://web-production-33681.up.railway.app/card-info/",
+          "https://web-production-33681.up.railway.app/card-info",
         );
         const cardList = res.data;
 
@@ -29,7 +29,7 @@ export default function AllAccounts() {
           cardList.map(async (card) => {
             try {
               const accRes = await axios.get(
-                `https://web-production-33681.up.railway.app/instagram/${card.id}/`,
+                `https://web-production-33681.up.railway.app/instagram/${card.id}`,
               );
 
               // ✅ count only unsold accounts

@@ -34,7 +34,7 @@ export default function Categories() {
   useEffect(() => {
     setLoadingState(true);
     axios
-      .get("https://web-production-33681.up.railway.app/category/")
+      .get("https://web-production-33681.up.railway.app/category")
       .then((res) => {
         setCategories(res.data);
       })

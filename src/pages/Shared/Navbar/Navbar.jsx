@@ -34,7 +34,7 @@ export default function NavbarTailwind() {
 
     try {
       const res = await axios.get(
-        "https://web-production-33681.up.railway.app/users/",
+        "https://web-production-33681.up.railway.app/users",
       );
 
       const users = res.data;
@@ -50,7 +50,7 @@ export default function NavbarTailwind() {
         // console.log(newUser);
 
         const addRes = await axios.post(
-          "https://web-production-33681.up.railway.app/users/",
+          "https://web-production-33681.up.railway.app/users",
           newUser,
         );
 
@@ -97,7 +97,7 @@ export default function NavbarTailwind() {
     if (!userData?.id || storeLoaded) return;
 
     axios
-      .get(`https://web-production-33681.up.railway.app/stores/${userData.id}/`)
+      .get(`https://web-production-33681.up.railway.app/stores/${userData.id}`)
       .then((res) => {
         setStoreData(res.data);
       })
