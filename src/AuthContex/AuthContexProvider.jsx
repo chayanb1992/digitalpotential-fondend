@@ -53,6 +53,7 @@ const ContexProvider = ({ children }) => {
 
     fetchUserData();
   }, [user, loading]);
+  console.log(userData);
 
   const createAccount = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
