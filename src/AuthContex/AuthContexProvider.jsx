@@ -41,7 +41,7 @@ const ContexProvider = ({ children }) => {
       if (!loading && user?.email) {
         try {
           const res = await axios.get(
-            `https://web-production-33681.up.railway.app/users/${user.email}/`,
+            `https://web-production-33681.up.railway.app/users/${user.email}`,
           );
           setUserData(res.data);
         } catch (error) {
