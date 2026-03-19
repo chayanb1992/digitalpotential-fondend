@@ -95,7 +95,7 @@ export default function AddProduct() {
         imgForm.append("logo", imageFile);
 
         const uploadRes = await axios.post(
-          "http://127.0.0.1:8000/stores-images/",
+          "https://web-production-33681.up.railway.app/stores-images/",
           imgForm,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -118,7 +118,7 @@ export default function AddProduct() {
       // console.log(productPayload);
 
       const productRes = await axios.post(
-        "http://127.0.0.1:8000/card-info/",
+        "https://web-production-33681.up.railway.app/card-info/",
         productPayload,
       );
 
@@ -127,9 +127,9 @@ export default function AddProduct() {
 
       /* 3️⃣ API Map */
       const apiMap = {
-        instagram: "http://127.0.0.1:8000/instagram/",
-        facebook: "http://127.0.0.1:8000/facebook/",
-        gmail: "http://127.0.0.1:8000/gmail/",
+        instagram: "https://web-production-33681.up.railway.app/instagram/",
+        facebook: "https://web-production-33681.up.railway.app/facebook/",
+        gmail: "https://web-production-33681.up.railway.app/gmail/",
       };
 
       const apiUrl = apiMap[formData.category];

@@ -54,7 +54,7 @@ export default function CreateStore() {
     try {
       // Upload image
       const uploadRes = await axios.post(
-        "http://127.0.0.1:8000/stores-images/",
+        "https://web-production-33681.up.railway.app/stores-images/",
         formData,
         {
           headers: {
@@ -75,12 +75,17 @@ export default function CreateStore() {
       };
       // console.log(data);
       // Save store in database
-      const storeRes = await axios.post("http://127.0.0.1:8000/stores/", data);
+      const storeRes = await axios.post(
+        "https://web-production-33681.up.railway.app/stores/",
+        data,
+      );
 
       console.log("Store created:", storeRes.data);
 
       axios
-        .patch(`http://localhost:8000/users/become-seller/${userData.id}`)
+        .patch(
+          `https://web-production-33681.up.railway.app/users/become-seller/${userData.id}`,
+        )
         .then((res) => {
           console.log("Updated:", res.data);
         })

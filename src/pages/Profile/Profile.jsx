@@ -21,7 +21,7 @@ export default function Profile() {
       setUpdating(true);
 
       await axios.patch(
-        `http://localhost:8000/users/become-seller/${userData.id}`,
+        `https://web-production-33681.up.railway.app/users/become-seller/${userData.id}`,
       );
 
       window.location.reload(); // simple refresh (later we can optimize)

@@ -15,7 +15,9 @@ export default function TrendingAccounts() {
     const fetchData = async () => {
       try {
         // 1️⃣ Get all cards
-        const res = await axios.get("http://127.0.0.1:8000/card-info/");
+        const res = await axios.get(
+          "https://web-production-33681.up.railway.app/card-info/",
+        );
 
         const cardList = res.data;
 
@@ -24,7 +26,7 @@ export default function TrendingAccounts() {
           cardList.map(async (card) => {
             try {
               const accRes = await axios.get(
-                `http://127.0.0.1:8000/instagram/${card.id}`,
+                `https://web-production-33681.up.railway.app/instagram/${card.id}`,
               );
 
               // count only AVAILABLE accounts

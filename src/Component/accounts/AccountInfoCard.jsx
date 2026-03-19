@@ -18,7 +18,7 @@ export default function AccountInfoCard() {
   const handleBuy = async () => {
     try {
       const res = await axios.post(
-        `http://127.0.0.1:8000/buy/${card.id}?quantity=${quantity}&user_id=${userData.id}`,
+        `https://web-production-33681.up.railway.app/buy/${card.id}?quantity=${quantity}&user_id=${userData.id}`,
       );
 
       const accounts = res.data.accounts;

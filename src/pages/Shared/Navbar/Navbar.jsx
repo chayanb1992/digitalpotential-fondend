@@ -33,7 +33,9 @@ export default function NavbarTailwind() {
     if (!user?.email) return;
 
     try {
-      const res = await axios.get("http://127.0.0.1:8000/users");
+      const res = await axios.get(
+        "https://web-production-33681.up.railway.app/users",
+      );
 
       const users = res.data;
       // console.log(users);
@@ -47,7 +49,10 @@ export default function NavbarTailwind() {
         };
         // console.log(newUser);
 
-        const addRes = await axios.post("http://127.0.0.1:8000/users", newUser);
+        const addRes = await axios.post(
+          "https://web-production-33681.up.railway.app/users",
+          newUser,
+        );
 
         setUserCategory(addRes.data.type || "Buyer");
       } else {
@@ -91,7 +96,7 @@ export default function NavbarTailwind() {
     if (!userData?.id || storeLoaded) return;
 
     axios
-      .get(`http://127.0.0.1:8000/stores/${userData.id}`)
+      .get(`https://web-production-33681.up.railway.app/stores/${userData.id}`)
       .then((res) => {
         setStoreData(res.data);
       })

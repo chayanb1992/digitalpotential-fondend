@@ -41,7 +41,7 @@ const ContexProvider = ({ children }) => {
       if (!loading && user?.email) {
         try {
           const res = await axios.get(
-            `http://127.0.0.1:8000/users/${user.email}`,
+            `https://web-production-33681.up.railway.app/users/${user.email}`,
           );
           setUserData(res.data);
         } catch (error) {

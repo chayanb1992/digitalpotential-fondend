@@ -42,7 +42,7 @@ export default function AddFund() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/paymentmethod")
+      .get("https://web-production-33681.up.railway.app/paymentmethod")
       .then((res) => {
         setPaymentMethod(res.data);
       })
@@ -102,7 +102,10 @@ export default function AddFund() {
     };
 
     try {
-      await axios.post("http://127.0.0.1:8000/payments/", payment_pending_data);
+      await axios.post(
+        "https://web-production-33681.up.railway.app/payments/",
+        payment_pending_data,
+      );
       setPaymentSubmitted(true);
     } catch (error) {
       console.log(error.response?.data);

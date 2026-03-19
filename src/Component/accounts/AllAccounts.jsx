@@ -20,14 +20,16 @@ export default function AllAccounts() {
         setLoading(true);
 
         // ✅ SAME API AS TRENDING
-        const res = await axios.get("http://127.0.0.1:8000/card-info/");
+        const res = await axios.get(
+          "https://web-production-33681.up.railway.app/card-info/",
+        );
         const cardList = res.data;
 
         const updatedCards = await Promise.all(
           cardList.map(async (card) => {
             try {
               const accRes = await axios.get(
-                `http://127.0.0.1:8000/instagram/${card.id}`,
+                `https://web-production-33681.up.railway.app/instagram/${card.id}`,
               );
 
               // ✅ count only unsold accounts
