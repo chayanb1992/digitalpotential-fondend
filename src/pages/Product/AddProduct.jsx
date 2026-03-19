@@ -95,7 +95,7 @@ export default function AddProduct() {
         imgForm.append("logo", imageFile);
 
         const uploadRes = await axios.post(
-          "https://web-production-33681.up.railway.app/stores-images",
+          "https://web-production-33681.up.railway.app/stores-images/",
           imgForm,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -118,7 +118,7 @@ export default function AddProduct() {
       // console.log(productPayload);
 
       const productRes = await axios.post(
-        "https://web-production-33681.up.railway.app/card-info",
+        "https://web-production-33681.up.railway.app/card-info/",
         productPayload,
       );
 
@@ -127,9 +127,9 @@ export default function AddProduct() {
 
       /* 3️⃣ API Map */
       const apiMap = {
-        instagram: "https://web-production-33681.up.railway.app/instagram",
-        facebook: "https://web-production-33681.up.railway.app/facebook",
-        gmail: "https://web-production-33681.up.railway.app/gmail",
+        instagram: "https://web-production-33681.up.railway.app/instagram/",
+        facebook: "https://web-production-33681.up.railway.app/facebook/",
+        gmail: "https://web-production-33681.up.railway.app/gmail/",
       };
 
       const apiUrl = apiMap[formData.category];

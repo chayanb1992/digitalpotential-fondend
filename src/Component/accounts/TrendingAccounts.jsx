@@ -16,7 +16,7 @@ export default function TrendingAccounts() {
       try {
         // 1️⃣ Get all cards
         const res = await axios.get(
-          "https://web-production-33681.up.railway.app/card-info",
+          "https://web-production-33681.up.railway.app/card-info/",
         );
 
         const cardList = res.data;

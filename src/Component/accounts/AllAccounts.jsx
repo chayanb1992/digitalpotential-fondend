@@ -21,7 +21,7 @@ export default function AllAccounts() {
 
         // ✅ SAME API AS TRENDING
         const res = await axios.get(
-          "https://web-production-33681.up.railway.app/card-info",
+          "https://web-production-33681.up.railway.app/card-info/",
         );
         const cardList = res.data;
 

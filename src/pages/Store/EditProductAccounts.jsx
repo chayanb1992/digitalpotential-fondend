@@ -75,7 +75,7 @@ export default function EditProductAccounts() {
       await Promise.all(
         parsedAccounts.map((acc) =>
           axios.post(
-            `https://web-production-33681.up.railway.app/instagram`,
+            `https://web-production-33681.up.railway.app/instagram/`,
             acc,
           ),
         ),

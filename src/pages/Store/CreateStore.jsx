@@ -54,7 +54,7 @@ export default function CreateStore() {
     try {
       // Upload image
       const uploadRes = await axios.post(
-        "https://web-production-33681.up.railway.app/stores-images",
+        "https://web-production-33681.up.railway.app/stores-images/",
         formData,
         {
           headers: {
@@ -76,7 +76,7 @@ export default function CreateStore() {
       // console.log(data);
       // Save store in database
       const storeRes = await axios.post(
-        "https://web-production-33681.up.railway.app/stores",
+        "https://web-production-33681.up.railway.app/stores/",
         data,
       );
 
