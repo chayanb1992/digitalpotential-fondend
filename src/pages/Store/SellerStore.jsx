@@ -29,7 +29,7 @@ export default function SellerStore() {
         setProductsLoading(true);
 
         const cardRes = await axios.get(
-          `https://web-production-33681.up.railway.app/card-info/${userData.id}`,
+          `https://web-production-33681.up.railway.app/card-info/${userData.id}/`,
         );
 
         const cardsData = cardRes.data;
@@ -38,7 +38,7 @@ export default function SellerStore() {
           cardsData.map(async (card) => {
             try {
               const accRes = await axios.get(
-                `https://web-production-33681.up.railway.app/instagram/${card.id}`,
+                `https://web-production-33681.up.railway.app/instagram/${card.id}/`,
               );
 
               return {
@@ -72,7 +72,7 @@ export default function SellerStore() {
 
     try {
       await axios.delete(
-        `https://web-production-33681.up.railway.app/card-info/${cardId}`,
+        `https://web-production-33681.up.railway.app/card-info/${cardId}/`,
       );
       setCards((prev) => prev.filter((card) => card.id !== cardId));
     } catch (err) {

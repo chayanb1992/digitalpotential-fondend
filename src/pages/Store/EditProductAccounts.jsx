@@ -23,7 +23,7 @@ export default function EditProductAccounts() {
     setLoading(true);
 
     axios
-      .get(`https://web-production-33681.up.railway.app/instagram/${cardId}`)
+      .get(`https://web-production-33681.up.railway.app/instagram/${cardId}/`)
       .then((res) => setAccounts(res.data))
       .catch(() => setAccounts([]))
       .finally(() => setLoading(false));
@@ -100,7 +100,7 @@ export default function EditProductAccounts() {
 
     try {
       await axios.delete(
-        `https://web-production-33681.up.railway.app/instagram/${id}`,
+        `https://web-production-33681.up.railway.app/instagram/${id}/`,
       );
       setAccounts((prev) => prev.filter((acc) => acc.id !== id));
     } catch {

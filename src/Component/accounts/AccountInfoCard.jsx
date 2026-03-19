@@ -18,7 +18,7 @@ export default function AccountInfoCard() {
   const handleBuy = async () => {
     try {
       const res = await axios.post(
-        `https://web-production-33681.up.railway.app/buy/${card.id}?quantity=${quantity}&user_id=${userData.id}`,
+        `https://web-production-33681.up.railway.app/buy/${card.id}?quantity=${quantity}&user_id=${userData.id}/`,
       );
 
       const accounts = res.data.accounts;
@@ -60,11 +60,13 @@ export default function AccountInfoCard() {
       try {
         // 1️⃣ Get card info
         const cardRes = await axios.get(
-          `http://127.0.0.1:8000/card-info/single/${id}`,
+          `https://web-production-33681.up.railway.app/card-info/single/${id}/`,
         );
 
         // 2️⃣ Get accounts of this card
-        const accRes = await axios.get(`http://127.0.0.1:8000/instagram/${id}`);
+        const accRes = await axios.get(
+          `https://web-production-33681.up.railway.app/instagram/${id}/`,
+        );
 
         const availableCount = accRes.data.filter((acc) => !acc.sold).length;
 

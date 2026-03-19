@@ -84,7 +84,7 @@ export default function CreateStore() {
 
       axios
         .patch(
-          `https://web-production-33681.up.railway.app/users/become-seller/${userData.id}`,
+          `https://web-production-33681.up.railway.app/users/become-seller/${userData.id}/`,
         )
         .then((res) => {
           console.log("Updated:", res.data);

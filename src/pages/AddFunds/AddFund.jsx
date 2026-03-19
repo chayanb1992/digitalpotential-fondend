@@ -42,7 +42,7 @@ export default function AddFund() {
 
   useEffect(() => {
     axios
-      .get("https://web-production-33681.up.railway.app/paymentmethod")
+      .get("https://web-production-33681.up.railway.app/paymentmethod/")
       .then((res) => {
         setPaymentMethod(res.data);
       })
