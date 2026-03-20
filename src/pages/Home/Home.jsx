@@ -20,7 +20,7 @@ const Home = () => {
       {/* <GrowthServices></GrowthServices> */}
       <HowItWorks></HowItWorks>
       <Testimonials></Testimonials>
-      <SellAccountCTA></SellAccountCTA>
+      {/* <SellAccountCTA></SellAccountCTA> */}
       <FAQSection></FAQSection>
     </div>
   );
