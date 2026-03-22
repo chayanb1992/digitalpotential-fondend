@@ -138,10 +138,7 @@ export default function NavbarTailwind() {
             >
               <Menu size={24} />
             </button>
-            <Link
-              to="/"
-              className="flex-shrink-0 transition-transform hover:scale-105"
-            >
+            <Link to="/" className="flex-shrink-0">
               <img
                 src={logo}
                 alt="logo"
